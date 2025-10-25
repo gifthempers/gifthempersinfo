@@ -20,7 +20,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, '../frontend')));
 
 // MongoDB Connection
-const MONGODB_URI = 'mongodb+srv://bhaskarAntoty123:bhaskar3958@bhaskarantony.wagpkay.mongodb.net/harsha-lucky-tours?retryWrites=true&w=majority';
+const MONGODB_URI = 'mongodb+srv://gifthempers:Admin@123456@cluster0.gxp7lff.mongodb.net/gifthempersdb?retryWrites=true&w=majority';
 
 mongoose.connect(MONGODB_URI, {
   useNewUrlParser: true,

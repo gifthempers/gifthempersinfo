@@ -39,7 +39,7 @@ app.use('/api/admin', adminRoutes);
 // // Serve HTML pages
 
 app.get('/admin', (req, res) => {
-  res.sendFile(path.join(__dirname, '../frontend/admin.html'));
+  res.sendFile(path.join(__dirname, './frontend/admin.html'));
 });
 
 // Error handling middleware

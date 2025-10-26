@@ -27,7 +27,7 @@ const registrationSchema = new mongoose.Schema({
   department: {
     type: String,
     required: true,
-    enum: ['cse', 'ece', 'mech', 'civil', 'eee', 'it', 'chemical', 'biotech', 'other']
+    // enum: ['cse', 'ece', 'mech', 'civil', 'eee', 'it', 'chemical', 'biotech', 'other']
   },
   ken: {
     type: String,

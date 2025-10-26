@@ -50,7 +50,7 @@ const sendRegistrationEmail = async (userEmail, registrationData) => {
     `
   };
 
-  return transporter.sendMail(mailOptions);
+  return await transporter.sendMail(mailOptions);
 };
 
 const sendAdminNotification = async (registrationData) => {
@@ -77,7 +77,7 @@ const sendAdminNotification = async (registrationData) => {
     `
   };
 
-  return transporter.sendMail(mailOptions);
+  return await transporter.sendMail(mailOptions);
 };
 
 const sendVerificationEmail = async (userEmail, verificationData) => {
@@ -105,7 +105,7 @@ const sendVerificationEmail = async (userEmail, verificationData) => {
     `
   };
 
-  return transporter.sendMail(mailOptions);
+  return await transporter.sendMail(mailOptions);
 };
 
 module.exports = {

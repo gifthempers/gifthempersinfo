@@ -2,12 +2,13 @@ const mongoose = require('mongoose');
 
 const connectDB = async () => {
   try {
-    const conn = await mongoose.connect(process.env.MONGODB_URI || 'mongodb+srv://gifthempers:Admin@123456@cluster0.gxp7lff.mongodb.net/gifthempersdb?retryWrites=true&w=majority', {
-      useNewUrlParser: true,
-      useUnifiedTopology: true,
-    });
+   await mongoose.connect('mongodb+srv://gifthempers:Admin123456@cluster0.gxp7lff.mongodb.net/gifthempersdb?retryWrites=true&w=majority').then(res => {
+      console.log(`connected mongodb`)
+   }).catch(err => {
+    console.error(err.message)
+   })
     
-    console.log(`MongoDB Connected: ${conn.connection.host}`);
+    
   } catch (error) {
     console.error('Error connecting to MongoDB:', error);
     process.exit(1);
